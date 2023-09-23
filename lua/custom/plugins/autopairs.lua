@@ -11,5 +11,13 @@ return {
       'confirm_done',
       cmp_autopairs.on_confirm_done()
     )
+    cmp.setup({
+      window = {
+        documentation = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered({
+          winhighlight = 'Normal:CmpPmenu,CursorLine:PmenuSel,Search:None'
+        }),
+      },
+    })
   end,
 }
